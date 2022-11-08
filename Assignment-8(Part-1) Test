@@ -1,1 +1,25 @@
 
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+class positiveDivisorNumberTest{
+	
+	@Test
+	void firstInputTest(){
+		instance = new positiveDivisorNumber();
+		String [] args = {3, 3, 15, 100}
+		main.(args);
+		
+		assertEquals((1, 2, 15) , main);
+	}
+	
+	@Test
+	void firstSecondTest(){
+		instance = new positiveDivisorNumber();
+		String [] args = {3, 3, 15, 100}
+		main.(args);
+		
+		assertNotEquals((1, 1, 15) , main);
+	}
+}
+
