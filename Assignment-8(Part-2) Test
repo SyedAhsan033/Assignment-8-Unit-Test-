@@ -1,0 +1,65 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+class closestNumberTest{
+	
+	@Test
+	void firstInputTest(){
+		var firstCompute = new closestNumber();
+		firstCompute.n = 5;
+		firstCompute.x = 35;
+		int array[] = new int[]{12, 23, 54, 78, 98};
+		
+		assertEquals(23, firstCompute.compute(array));
+	}
+	
+	@Test
+	void secondInputTest(){
+		var secondCompute = new closestNumber();
+		secondCompute.n = 3;
+		secondCompute.x = 24;
+		int array[] = new int[]{12, 36, 14};
+		
+		assertEquals(14, secondCompute.compute(array));
+	}
+	
+	@Test
+	void thirdInputTest(){
+		var thirdCompute = new closestNumber();
+		thirdCompute.n = 4;
+		thirdCompute.x = 3;
+		int array[] = new int[]{1, 5, 2, 6};
+		
+		assertEquals(2, thirdCompute.compute(array));
+	}
+	
+	@Test
+	void fourthInputTest(){
+		var fourthCompute = new closestNumber();
+		fourthCompute.n = 10;
+		fourthCompute.x = 8;
+		int array[] = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		assertEquals(8, fourthCompute.compute(array));
+	}
+	
+	@Test
+	void fifthInputTest(){
+		var fifthCompute = new closestNumber();
+		fifthCompute.n = 4;
+		fifthCompute.x = 100;
+		int array[] = new int[]{95, 64, 81, 112};
+		
+		assertEquals(95, fifthCompute.compute(array));
+	}
+	
+	@Test
+	void sixthInputTestNegativeScenario(){
+		var fifthCompute = new closestNumber();
+		fifthCompute.n = 4;
+		fifthCompute.x = 100;
+		int array[] = new int[]{95, 64, 81, 112};
+		
+		assertNotEquals(112, fifthCompute.compute(array));
+	}
+}
